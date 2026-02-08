@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Join Yatra Vats for the best group tours in India. Led by Saurabh Patel, we offer family-friendly trips to Kedarnath, Kashmir, Goa, and more.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatra Vats | Best Group Tours & Vlogs by Saurabh Patel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contact-links">
+                <a href="tel:+916263777672"><i class="fas fa-phone"></i> +91 6263777672</a>
+                <a href="mailto:yatravats@gmail.com"><i class="fas fa-envelope"></i> yatravats@gmail.com</a>
+            </div>
+            <div class="social-header">
+                <a href="https://instagram.com/yatravats" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/profile.php?id=100006895540130" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.webp" alt="Yatra Vats Logo">
+                <div class="logo-text">
+                    <h1>Yatra <span>Vats</span></h1>
+                </div>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home_banner">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#tours" class="dropbtn">Tours <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <a href="#tours"><button class="filter-btn active" data-filter="all">National</button></a>
+                        <a href="#tours"><button class="filter-btn" data-filter="hill_stations">Hill Station &
+                                Nature</button></a>
+                        <a href="#tours"><button class="filter-btn" data-filter="pilgrimage">Pilgrimage</button></a>
+                        <a href="#tours"><button class="filter-btn" data-filter="south">South India</button></a>
+                        <a href="#tours"><button class="filter-btn" data-filter="beach_island">Beach &
+                                Island</button></a>
+                    </ul>
+                </li>
+                <li><a href="#vlogs">Vlog</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="tel:6263777672" class="nav-call-btn">Inquiry Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home_banner">
+        <div class="hero-slider">
+            <div class="slider-wrapper">
+                <div class="hero-slide active">
+                    <img src="kerala_slider.jpg" alt="Slide 1">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-slide">
+                    <img src="andaman_slider.jpg" alt="Slide 2">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-slide">
+                    <img src="kashmir group.webp" alt="Slide 3">
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+
+            <div class="dots-wrapper">
+            </div>
+
+            <div class="slider-controls">
+                <button class="nav-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="upcoming_tour" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Upcoming <span>Group Tours</span></h2>
+                <p>Yatra Vats ke Saath Banayein Yaadgaar Safar.</p>
+            </div>
+
+            <div class="upcoming-tours-grid">
+                <div class="upcoming-tour-card">
+                    <div class="tour-image">
+                        <img src="kashmir_pic.webp" alt="Kashmir">
+                        <span class="tour-badge">Best Seller</span>
+                    </div>
+                    <div class="tour-content">
+                        <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> 23 March - 28
+                                March</span><span><i class="fas fa-clock"></i> 5N/6D</span></div>
+                        <h3>Kashmir</h3>
+                        <p>Paradise on Earth: Srinagar, Gulmarg, Pahalgam.</p>
+                        <div class="tour-price"><span class="price">₹11,999</span><small>&nbsp;per person</small></div>
+                        <div class="tour-actions">
+                            <a href="https://wa.me/916263777672?text=Kashmir Inquiry" class="btn-book">Book</a>
+                            <a href="Kashmir Group Tour 2026.pdf" download="Kashmir_Itinerary_YatraVats"
+                                class="btn-details" onclick="openItinerary('kashmir')"><i class="fas fa-file-download">
+                                </i>Itinerary </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upcoming-tour-card">
+                    <div class="tour-image"><img src="sikkim_pic.webp" alt="Sikkim"><span class="tour-badge">Best
+                            Seller</span></div>
+                    <div class="tour-content">
+                        <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> 15 May - 20 May</span><span><i
+                                    class="fas fa-clock"></i> 5N/6D</span></div>
+                        <h3>Sikkim Darjeeling</h3>
+                        <p>Explore the beauty of East Himalayas.</p>
+                        <div class="tour-price"><span class="price">₹12,999</span><small>&nbsp;per person</small></div>
+                        <div class="tour-actions">
+                            <a href="https://wa.me/916263777672?text=Sikkim Inquiry" class="btn-book">Book</a>
+                            <a href="SIKKIM GROUP TOUR.pdf" download="Sikkim_Itinerary_YatraVats" class="btn-details"
+                                onclick="openItinerary('sikkim')" data-pdf="Sikkim-itinerary.pdf">
+                                <i class="fas fa-file-download"></i>Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upcoming-tour-card">
+                    <div class="tour-image"><img src="4 dham pic.webp" alt="CharDham"></div>
+                    <div class="tour-content">
+                        <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> 05 June - 14
+                                June</span><span><i class="fas fa-clock"></i> 9N/10D</span></div>
+                        <h3>Char Dham Yatra</h3>
+                        <p>The ultimate spiritual salvation journey.</p>
+                        <div class="tour-price"><span class="price">₹32,650</span><small>&nbsp;per person</small></div>
+                        <div class="tour-actions">
+                            <a href="https://wa.me/916263777672?text=CharDham Inquiry" class="btn-book">Book</a>
+                            <a href="4 Dham Yatra 2026.pdf" download="Char_Dham_Itinerary_YatraVats" class="btn-details"
+                                onclick="openItinerary('chardham')" data-pdf="Chardham-itinerary.pdf">
+                                <i class="fas fa-file-download"></i>Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="itineraryModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <div id="modalBody">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tours" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explore<span>Tour Packages</span></h2>
+            </div>
+            <div class="section-header">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">National</button>
+                    <button class="filter-btn" data-filter="hill_stations">Hill Station & Nature</button>
+                    <button class="filter-btn" data-filter="pilgrimage">Pilgrimage</button>
+                    <button class="filter-btn" data-filter="south">South India</button>
+                    <button class="filter-btn" data-filter="beach_island">Beach & Island</button>
+                </div>
+            </div>
+
+            <div class="tours-scroll-container">
+                <div class="tours-grid" id="toursGrid">
+                    <div class="tour-card" data-category="hill_stations">
+                        <div class="tour-image">
+                            <img src="kashmir_pic.webp" alt="Kashmir">
+                            <span class="tour-badge">Top Choice</span>
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 5N/6D</span></div>
+                            <h3>Kashmir</h3>
+                            <p>Paradise on Earth: Srinagar, Gulmarg, Pahalgam.</p>
+                            <div class="tour-price"><span class="price">₹11,999</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Kashmir Inquiry" class="btn-book">Book</a>
+                                <a href="Kashmir Group Tour 2026.pdf" download="Kashmir_Itinerary_YatraVats"
+                                    class="btn-details" onclick="openItinerary('kashmir')"><i
+                                        class="fas fa-file-download"> </i>Itinerary </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="hill_stations">
+                        <div class="tour-image"><img src="shimla_pic.jpg" alt="Manali"><span
+                                class="tour-badge">Popular</span>
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 5N/6D</span></div>
+                            <h3>Shimla Manali</h3>
+                            <p>The Queen of Hills and Snow Adventures.</p>
+                            <div class="tour-price"><span class="price">₹7,999</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Shimla Manali Inquiry"
+                                    class="btn-book">Book</a>
+                                <a href="SHIMLA MANALI G. TOUR 2026.pdf" download="Shimla_Manali_Itinerary_YatraVats"
+                                    class="btn-details" onclick="openItinerary('shimla-manali')"
+                                    data-pdf="Shimla-manali-itinerary.pdf">
+                                    <i class="fas fa-file-download"></i>Itinerary</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="south">
+                        <div class="tour-image"><img src="kerala_pic.webp" alt="Kerala"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 5N/6D</span></div>
+                            <h3>Kerala</h3>
+                            <p>God's Own Country: Hills and Backwaters.</p>
+                            <div class="tour-price"><span class="price">₹13,899</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Kerala Inquiry" class="btn-book">Book</a>
+                                <a href="KERALA GROUP TOUR 2025.pdf" download="Kerala_Itinerary_YatraVats"
+                                    class="btn-details" onclick="openItinerary('kerala')"
+                                    data-pdf="Kerala-itinerary.pdf">
+                                    <i class="fas fa-file-download"></i>Itinerary</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="hill_stations">
+                        <div class="tour-image"><img src="sikkim_pic.webp" alt="Sikkim"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 5N/6D</span></div>
+                            <h3>Sikkim-Darjeeling</h3>
+                            <p>Explore the beauty of East Himalayas.</p>
+                            <div class="tour-price"><span class="price">₹12,999</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Sikkim Inquiry" class="btn-book">Book</a>
+                                <a href="SIKKIM GROUP TOUR.pdf" download="Sikkim_Darjeeling_Itinerary_YatraVats"
+                                    class="btn-details" onclick="openItinerary('sikkim')"
+                                    data-pdf="Sikkim-itinerary.pdf">
+                                    <i class="fas fa-file-download"></i>Itinerary</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="pilgrimage">
+                        <div class="tour-image"><img src="4 dham pic.webp" alt="CharDham"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 9N/10D</span></div>
+                            <h3>Char Dham Yatra</h3>
+                            <p>The ultimate spiritual salvation journey.</p>
+                            <div class="tour-price"><span class="price">₹32,650</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=CharDham Inquiry" class="btn-book">Book</a>
+                                <a href="4 Dham Yatra 2026.pdf" download="Char_Dham_Itinerary_YatraVats"
+                                    class="btn-details" onclick="openItinerary('chardham')"
+                                    data-pdf="Chardham-itinerary.pdf">
+                                    <i class="fas fa-file-download"></i>Itinerary</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="pilgrimage">
+                        <div class="tour-image"><img src="do-dham_pic.jpg" alt="DoDham"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 4N/5D</span></div>
+                            <h3>Do Dham Yatra</h3>
+                            <p>Kedarnath and Badrinath sacred yatra.</p>
+                            <div class="tour-price"><span class="price">₹18,150</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=DoDham Inquiry" class="btn-book">Book</a>
+                                <a href="Do Dham Yatra 2026.pdf" download="Do_Dham_Itinerary_YatraVats"
+                                    class="btn-details" onclick="openItinerary('dodham')"
+                                    data-pdf="Do-Dham-itinerary.pdf"><i class="fas fa-file-download"> </i> Itinerary</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="pilgrimage">
+                        <div class="tour-image">
+                            <img src="kedarnath_pic.jpg" alt="Kedarnath">
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 4N/5D</span></div>
+                            <h3>Kedarnath</h3>
+                            <p>Divine journey to the abode of Lord Shiva.</p>
+                            <div class="tour-price"><span class="price">₹12,500</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Kedarnath Inquiry" class="btn-book">Book</a>
+                                <button class="btn-details" onclick="openItinerary('kedarnath')">Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="hill_stations">
+                        <div class="tour-image"><img src="spiti_pic.jpg" alt="Spiti"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 7N/8D</span></div>
+                            <h3>Spiti Valley</h3>
+                            <p>The Middle Land: Rugged, Wild, Beautiful.</p>
+                            <div class="tour-price"><span class="price">₹18,999</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Spiti Inquiry" class="btn-book">Book</a>
+                                <button class="btn-details" onclick="openItinerary('spiti')">Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="hill_stations">
+                        <div class="tour-image"><img src="nainital_pic.jpg" alt="Nainital"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 2N/3D</span></div>
+                            <h3>Nainital</h3>
+                            <p>The City of Lakes and Scenic Peaks.</p>
+                            <div class="tour-price"><span class="price">₹6,499</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Nainital Inquiry" class="btn-book">Book</a>
+                                <button class="btn-details" onclick="openItinerary('nainital')">Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="beach_island">
+                        <div class="tour-image"><img src="goa_pic.jpg" alt="Goa"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 3N/4D</span></div>
+                            <h3>Goa Beach Party</h3>
+                            <p>Enjoy the waves, shacks, and nightlife.</p>
+                            <div class="tour-price"><span class="price">₹10,499</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Goa Inquiry" class="btn-book">Book</a>
+                                <button class="btn-details" onclick="openItinerary('goa')">Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="hill_stations">
+                        <div class="tour-image"><img src="ooty_pic.webp" alt="Ooty"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 3N/4D</span></div>
+                            <h3>Ooty Hills</h3>
+                            <p>Nilgiri mountains and lush tea estates.</p>
+                            <div class="tour-price"><span class="price">₹9,999</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Ooty Inquiry" class="btn-book">Book</a>
+                                <button class="btn-details" onclick="openItinerary('ooty')">Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="pilgrimage">
+                        <div class="tour-image"><img src="haridwar pic.jpg" alt="Haridwar"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 2N/3D</span></div>
+                            <h3>Haridwar Rishikesh</h3>
+                            <p>The gateway to God and spiritual yoga.</p>
+                            <div class="tour-price"><span class="price">₹5,999</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Haridwar Inquiry" class="btn-book">Book</a>
+                                <button class="btn-details" onclick="openItinerary('haridwar')">Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="pilgrimage beach_island">
+                        <div class="tour-image"><img src="Rameswaram_pic.jpg" alt="Rameshwaram"></div>
+                        <div class="tour-content">
+                            <div class="tour-meta"><span><i class="fas fa-clock"></i> 4N/5D</span></div>
+                            <h3>Rameshwaram</h3>
+                            <p>The holy island temple in South India.</p>
+                            <div class="tour-price"><span class="price">₹13,500</span><small>&nbsp;per person</small>
+                            </div>
+                            <div class="tour-actions">
+                                <a href="https://wa.me/916263777672?text=Rameshwaram Inquiry" class="btn-book">Book</a>
+                                <button class="btn-details" onclick="openItinerary('rameshwaram')">Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="nav-btn prev-btn" onclick="scrollSlider(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next-btn" onclick="scrollSlider(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <div id="itineraryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="slim-header">
+                <span class="red-line"></span>
+                <h2>Why Choose <span>Yatra Vats</span>?</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="icon-box cyan-bg">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Best Price</h4>
+                        <p>Premium tours at budget prices.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon-box yellow-bg">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>100% Safety</h4>
+                        <p>Verified stays & safe travels.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon-box red-bg">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>YouTube Trust</h4>
+                        <p>Transparent & honest guidance.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon-box black-bg">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated help for every trip.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="vlog-section" id="vlogs">
+        <div class="container">
+            <div class="vlog-card">
+                <div class="vlog-grid">
+                    <div class="vlog-video">
+                        <div class="video-wrapper">
+                            <iframe id="mainVlogFrame" src="https://www.youtube.com/embed/dqMRmVIfD_g" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="video-glow"></div>
+                    </div>
+
+                    <div class="vlog-content">
+                        <span class="vlog-tag">Yatra Vats Originals</span>
+                        <h2 class="title">Experience Our <span>Journeys</span></h2>
+                        <p>Watch real travel stories and destination insights from our latest tours.</p>
+
+                        <div class="mini-carousel">
+                            <p class="carousel-label">Recent Uploads:</p>
+                            <div class="vlog-thumbs">
+                                <div class="thumb-item active" onclick="changeVlog('dqMRmVIfD_g')">
+                                    <img src="https://img.youtube.com/vi/dqMRmVIfD_g/mqdefault.jpg" alt="Vlog 1">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="thumb-item" onclick="changeVlog('8Tkgkm20Qa4')">
+                                    <img src="https://img.youtube.com/vi/8Tkgkm20Qa4/mqdefault.jpg" alt="Vlog 2">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="thumb-item" onclick="changeVlog('_mTKWOXiQ5g')">
+                                    <img src="https://img.youtube.com/vi/_mTKWOXiQ5g/mqdefault.jpg" alt="Vlog 3">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://youtube.com/@yatravats9617" target="_blank" class="yt-button">
+                            <div class="btn-icon"><i class="fab fa-youtube"></i></div>
+                            <span>Explore Full Channel</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="review-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our <span>Yatris</span> Say</h2>
+                <p>1000+ families and solo travelers trust Yatra Vats</p>
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="m1.webp" alt="Sandeep Negi">
+                                <div>
+                                    <h4>Sandeep Negi</h4>
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p>"Spiti ki offbeat locations aur homestays ka experience lajawab tha. Yatra Vats ne har
+                                cheez ka dhyan rakha."</p>
+                            <span class="tour-tag">🏔️ Spiti Valley</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="w1.webp" alt="Anjali Singh">
+                                <div>
+                                    <h4>Anjali Singh</h4>
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p>"Ooty aur Coonoor ki trip bahut hi sukoon bhari thi. Cab driver aur hotels dono top-notch
+                                the."</p>
+                            <span class="tour-tag">🌊 South India</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="m2.webp" alt="Vikram Rathore">
+                                <div>
+                                    <h4>Vikram Rathore</h4>
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p>"Mummy-Papa ko Char Dham yatra karwani thi, Saurabh ji ne bade bhai ki tarah poori help
+                                ki. Shukriya!"</p>
+                            <span class="tour-tag">🚩 Char Dham</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="w2.webp" alt="Neha Kapoor">
+                                <div>
+                                    <h4>Neha Kapoor</h4>
+                                    <div class="stars">⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p>"Baga aur Calangute ke paas best stay dilwaya. Itinerary bahut flexible thi, humne poora
+                                enjoy kiya."</p>
+                            <span class="tour-tag">🏖️ Goa</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="m3.webp" alt="Rahul Mehta">
+                                <div>
+                                    <h4>Rahul Mehta</h4>
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p>"Snowfall ke beech Manali ki trip awesome rahi. Budget mein itna achha package milna
+                                mushkil hai."</p>
+                            <span class="tour-tag">❄️ Shimla-Manali</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="m4.webp" alt="Deepak Joshi">
+                                <div>
+                                    <h4>Deepak Joshi</h4>
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p>"Sikkim ki haseen wadiyan aur Yatra Vats ka management—perfect combo! Sab kuch on-time
+                                tha."</p>
+                            <span class="tour-tag">🌸 Sikkim</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="w3.webp" alt="Megha Jain">
+                                <div>
+                                    <h4>Megha Jain</h4>
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p>"Munnar aur Alleppey houseboat ka experience dream jaisa tha. Highly recommend for
+                                honeymoon couples."</p>
+                            <span class="tour-tag">🛶 Kerala</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="m5.webp" alt="Arun Sharma">
+                                <div>
+                                    <h4>Arun Sharma</h4>
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p>"Pehli baar Kedarnath gaya tha, dar tha par group members family jaise ban gaye. Great
+                                vibes!"</p>
+                            <span class="tour-tag">⛰️ Kedarnath</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-slide">
+                            <div class="review-card">
+                                <div class="user-info">
+                                    <img src="w4.webp" alt="Pooja Hegde">
+                                    <div>
+                                        <h4>Pooja Hegde</h4>
+                                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                                <p>"South Indian temples ki yatra bahut achhi rahi. Guide ne history bahut achhe se
+                                    samjhai."</p>
+                                <span class="tour-tag">⛩️ Rameshwaram</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="m6.webp" alt="Karan Malhotra">
+                                <div>
+                                    <h4>Karan Malhotra</h4>
+                                    <div class="stars">⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p>"Ganga Aarti aur Rishikesh rafting ka plan ekdum solid tha. Value for money trip!"</p>
+                            <span class="tour-tag">✨ Haridwar</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Common <span>Queries</span></h2>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>How can I book a group tour?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Booking is seamless! Connect with us via WhatsApp, discuss the itinerary, and secure your
+                            spot with a nominal token amount.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>Is it safe for solo female travelers?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Safety is our top priority. We foster a family-like environment, making it 100%
+                            safe for solo female travelers and families.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>What is included in the package?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most packages include AC transport, premium stays (Double/Triple sharing), breakfast, dinner,
+                            and all major sightseeing as per the itinerary.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>Does Saurabh Patel lead the tours?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Our flagship group tours are personally led by Saurabh Patel to ensure the signature
+                            Yatra Vats experience you see in our vlogs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-content">
+                    <div class="section-header-compact">
+                        <h2 class="section-title">Get in <span>Touch</span></h2>
+                        <p>Have questions about your next adventure? Our travel experts are here to help you plan the
+                            perfect journey.</p>
+                    </div>
+
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="i-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="i-text">
+                                <h4>Office Location</h4>
+                                <p>Sector 4, Bhilai, Chhattisgarh, India - 490001</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="i-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="i-text">
+                                <h4>Direct Connect</h4>
+                                <p><a href="tel:+916263777672">+91 6263777672</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="i-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="i-text">
+                                <h4>Email Support</h4>
+                                <p><a href="mailto:yatravats@gmail.com">yatravats@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-minimal">
+                        <a href="https://facebook.com/profile.php?id=100006895540130" target="_blank" class="fb"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/yatravats" target="_blank" class="ig"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@yatravats9617" target="_blank" class="yt"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/916263777672" target="_blank" class="wa"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14878.472138986548!2d81.3340!3d21.1873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a293d0000000001%3A0x0!2zU2VjdG9yIDQsIEJoaWxhaSwgQ2hoYXR0aXNnYXJo!5e0!3m2!1sen!2sin!4v1700000000000"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inquiry_feedback" class="form-section">
+        <div class="container">
+            <div class="form-grid">
+
+                <div class="form-container query-box">
+                    <div class="form-header">
+                        <div class="icon-circle"><i class="fas fa-paper-plane"></i></div>
+                        <h3>Plan Your Next Adventure</h3>
+                        <p>Let us know where you want to go, and we'll handle the rest!</p>
+                    </div>
+                    <form id="queryForm">
+                        <div class="input-group">
+                            <input type="text" placeholder="Full Name" required>
+
+                            <input type="tel" id="userPhone" name="phone" placeholder="WhatsApp Number (10-Digit)"
+                                pattern="[0-9]{10}" maxlength="10" required>
+                        </div>
+                        <select required>
+                            <option value="" disabled selected>Choose Your Destination</option>
+                            <option value="Kashmir">Kashmir</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Char-Dham">Char-Dham</option>
+                            <option value="Shimla-Manali">Shimla-Manali</option>
+                            <option value="kerala">Kerala</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Ooty">Ooty</option>
+                            <option value="Haridwar">Haridwar</option>
+                            <option value="Rameshwaram">Rameshwaram</option>
+                            <option value="Other">Other Destinations</option>
+                        </select>
+                        <textarea placeholder="Tell us about your requirements or questions..." rows="4"></textarea>
+                        <button type="submit" class="submit-btn query-btn">Get A Free Quote</button>
+                    </form>
+                </div>
+
+                <div class="form-container feedback-box">
+                    <div class="form-header">
+                        <div class="icon-circle"><i class="fas fa-star-half-alt"></i></div>
+                        <h3>Share Your Experience</h3>
+                        <p>Your feedback helps us create better memories for everyone.</p>
+                    </div>
+                    <form id="feedbackForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <div class="rating-container">
+                            <label>Rate Your Journey:</label>
+                            <div class="star-rating">
+                                <input type="radio" name="star" id="star5"><label for="star5">★</label>
+                                <input type="radio" name="star" id="star4"><label for="star4">★</label>
+                                <input type="radio" name="star" id="star3"><label for="star3">★</label>
+                                <input type="radio" name="star" id="star2"><label for="star2">★</label>
+                                <input type="radio" name="star" id="star1"><label for="star1">★</label>
+                            </div>
+                        </div>
+                        <textarea placeholder="How was your trip? We'd love to hear your story..." rows="4"
+                            required></textarea>
+                        <button type="submit" class="submit-btn feedback-btn">Submit Feedback</button>
+                    </form>
+                    <div id="feedbackMessage"
+                        style="display:none; color: #008b8b; margin-top: 15px; font-weight: bold;">
+                        Thank you for your valuable feedback! ✨
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h2>Yatra <span>Vats</span></h2>
+                    </div>
+                    <p>Yatra Vats is not just a travel agency; it's your gateway to unforgettable memories. We
+                        specialize in crafting seamless travel experiences, from the snow-capped mountains of Kashmir to
+                        the serene beaches of Goa. Our mission is to provide high-quality, budget-friendly group tours
+                        and personalized services that turn your dream vacation into reality.</p>
+
+                    <div class="footer-social">
+                        <h4 class="social-title">Connect With Us</h4>
+                        <div class="social-icons-wrapper">
+                            <a href="https://facebook.com/profile.php?id=100006895540130" target="_blank"
+                                class="s-icon fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/yatravats" target="_blank" class="s-icon ig"
+                                title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@yatravats9617" target="_blank" class="s-icon yt"
+                                title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://wa.me/916263777672" target="_blank" class="s-icon wa" title="WhatsApp"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a href="#" target="_blank" class="s-icon tg" title="Telegram"><i
+                                    class="fab fa-telegram-plane"></i></a>
+                            <a href="#" target="_blank" class="s-icon in" title="LinkedIn"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home_banner"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#tours"><i class="fas fa-chevron-right"></i> Popular Tours</a></li>
+                        <li><a href="#vlogs"><i class="fas fa-chevron-right"></i> Travel Vlogs</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="#faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-card">
+                        <div class="c-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <p>Call Us</p>
+                                <strong>+91 6263777672</strong>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p>Email Address</p>
+                                <strong>yatravats@gmail.com</strong>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>Office Location</p>
+                                <strong>Sector 4, Bhilai, CG</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container flex-bottom">
+                <p>&copy; 2026 <span class="highlight">Yatra Vats</span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/916263777672" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <div class="whatsapp-tooltip">Chat with us</div>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
