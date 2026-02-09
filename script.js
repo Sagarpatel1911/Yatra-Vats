@@ -1,3 +1,34 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("welcomeModal");
+    const closeBtn = document.getElementById("closeBtnIcon");
+
+    // 2 Seconds ka delay
+    setTimeout(() => {
+        modal.style.display = "flex";
+        setTimeout(() => { modal.style.opacity = "1"; }, 10);
+        document.body.style.overflow = "hidden"; // Scroll Lock
+    }, 2000);
+
+    const closeModal = () => {
+        modal.style.opacity = "0";
+        setTimeout(() => {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Scroll Unlock
+        }, 400);
+    };
+
+    closeBtn.addEventListener("click", closeModal);
+
+    // Background click to close
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+});
+
+
+
+
+
 // Mobile Menu Toggle Logic
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
@@ -144,6 +175,38 @@ filterBtns.forEach(btn => {
     });
 });
 
+// Filter buttons par event listener
+const filterButtons = document.querySelectorAll('.filter-btn');
+const scrollContainer = document.querySelector('.tours-scroll-container');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const filterValue = btn.getAttribute('data-filter');
+
+        // 1. Filter logic: Cards ko hide/show karna
+        const cards = document.querySelectorAll('.tour-card');
+        cards.forEach(card => {
+            const categories = card.getAttribute('data-category').split(' ');
+            if (filterValue === 'all' || categories.includes(filterValue)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // 2. SMOOTH SCROLL RESET (Ye aapka main fix hai) ✅
+        // Jaise hi filter badle, slider ko wapas 0 (start) par le jao
+        scrollContainer.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+        });
+
+        // 3. Active button class update karna
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    });
+});
+
 // 3. Open Itinerary (Updated to show 13 places)
 function openItinerary(tourId) {
     const modal = document.getElementById("itineraryModal");
@@ -172,10 +235,16 @@ function closeModal() { document.getElementById("itineraryModal").style.display 
 
 function scrollSlider(direction) {
     const container = document.querySelector('.tours-scroll-container');
-    const scrollAmount = 350; // Adjust this based on your card width
+    const firstCard = document.querySelector('.tour-card');
 
+    if (!firstCard) return; // Agar cards nahi hain toh return kar jaye
+
+    // 1. Ek card ki poori width calculate karein (including gap)
+    const cardWidth = firstCard.offsetWidth + 20; // 20px aapka CSS gap hai
+
+    // 2. Container ko sahi direction mein scroll karein
     container.scrollBy({
-        left: direction * scrollAmount,
+        left: direction * cardWidth,
         behavior: 'smooth'
     });
 }
@@ -204,26 +273,26 @@ function changeVlog(videoId) {
 
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
     },
-    1024: {
-      slidesPerView: 3
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
     },
-  },
+    breakpoints: {
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        },
+    },
 });
 
 
@@ -285,7 +354,7 @@ if (feedbackForm) {
 
         // Show Success Message 🎊
         feedbackMsg.style.display = 'block';
-        
+
         // Visual feedback: make the form look "submitted"
         this.style.opacity = '0.3';
         this.style.pointerEvents = 'none';
@@ -299,6 +368,3 @@ if (feedbackForm) {
         }, 5000);
     });
 }
-
-
-
