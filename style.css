@@ -340,9 +340,8 @@ header {
     background: #000;
     position: relative;
     overflow: hidden;
-    /* Yeh line sabse zaroori hai: Yeh 16:9 ratio maintain karega */
-    /* Agar photo katti hai toh aap ise 21/9 bhi kar sakte hain desktop ke liye */
-    aspect-ratio: 16 / 9;
+    display: block;
+    aspect-ratio: 2 / 1;
 }
 
 .hero-slider,
@@ -369,7 +368,7 @@ header {
        par sides mein black space aa sakta hai agar photo choti hui.
        'cover' with aspect-ratio cutting ko minimize karta hai. */
     object-fit: cover;
-    object-position: top center;
+    object-position: center center;
 }
 
 .hero-overlay {
@@ -428,7 +427,7 @@ header {
 @media (max-width: 768px) {
     #home_banner {
         /* Mobile par ratio change kar denge taaki photo lambi dikhe */
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 2 / 1;
     }
 
     .nav-btn {
@@ -904,6 +903,200 @@ header {
 
     .feature-item {
         padding: 10px;
+    }
+}
+
+
+
+
+
+
+/* --- ABOUT US SECTION STYLING --- */
+.about-section {
+    overflow: hidden;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Image Side */
+.about-image-side {
+    position: relative;
+}
+
+.image-stack {
+    position: relative;
+    padding: 20px;
+}
+
+.main-about-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px rgb(0, 255, 255);
+    /* Cyan shadow block style */
+    display: block;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid rgb(0, 255, 255);
+    animation: float 3s ease-in-out infinite;
+}
+
+.experience-badge .number {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: rgb(0, 255, 255);
+}
+
+.experience-badge .text {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.yt-subscriber-count {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-radius: 50px;
+    width: fit-content;
+    border: 1px solid #eee;
+}
+
+.yt-subscriber-count i {
+    color: #ff0000;
+    font-size: 20px;
+}
+
+/* Content Side */
+.about-subtitle {
+    font-size: 22px;
+    color: #333;
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+.about-text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.mission-vision {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.mv-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.mv-item i {
+    background: rgba(0, 255, 255, 0.1);
+    color: #008b8b;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.mv-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 17px;
+    color: #000;
+}
+
+.mv-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.about-stats-row {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mini-stat h3 {
+    color: #ff0000;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.mini-stat p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #666;
+}
+
+.btn-about {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-about:hover {
+    background: rgb(0, 255, 255);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image-side {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .about-content-side {
+        text-align: center;
+    }
+
+    .slim-header {
+        justify-content: center;
+    }
+
+    .mv-item {
+        text-align: left;
     }
 }
 
