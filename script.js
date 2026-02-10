@@ -128,7 +128,7 @@ function changeSlide(n) {
 function startTimer() {
     timer = setInterval(() => {
         showSlide(currentIdx + 1);
-    }, 2500);
+    }, 5000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -247,6 +247,26 @@ function scrollSlider(direction) {
         left: direction * cardWidth,
         behavior: 'smooth'
     });
+}
+
+
+
+
+
+function focusQueryForm() {
+    // 1. Niche Query Form tak scroll karega
+    const querySection = document.getElementById('inquiry_feedback');
+    if (querySection) {
+        querySection.scrollIntoView({ behavior: 'smooth' });
+
+        // 2. Thoda wait karega scroll khatam hone ka, phir input focus karega
+        setTimeout(() => {
+            const nameInput = document.getElementById('username');
+            if (nameInput) {
+                nameInput.focus();
+            }
+        }, 800); // 800ms scroll animation ke liye
+    }
 }
 
 
