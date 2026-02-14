@@ -1090,7 +1090,21 @@
   ]
 }
 </script>
+    <script async type='module'
+        src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
 
+    <style>
+        /* Isse chatbot ka button aur professional lagega agar interface allow kare */
+        zapier-interfaces-chatbot-embed {
+            --zapier-interfaces-chatbot-embed-bottom: 25px;
+            /* Chatbot niche rahega */
+            --zapier-interfaces-chatbot-embed-right: 25px;
+        }
+    </style>
+
+    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmllsd7cg006oc4pcrojnrs9e'>
+    </zapier-interfaces-chatbot-embed>
+    
 </body>
 
 </html>
