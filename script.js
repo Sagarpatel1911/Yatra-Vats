@@ -389,11 +389,6 @@ if (feedbackForm) {
     });
 }
 
-
-
-
-
-
 /*
 document.getElementById("queryForm").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -424,4 +419,4 @@ document.getElementById("queryForm").addEventListener("submit", function (e) {
             .setMimeType(ContentService.MimeType.JSON);
     }
 });
-
+*/
