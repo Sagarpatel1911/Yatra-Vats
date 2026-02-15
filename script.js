@@ -362,7 +362,7 @@ if (queryForm) {
         window.open(waLink, '_blank');
         this.reset();
     });
-}
+} 
 
 // 2. Feedback Form Logic (Success Message)
 const feedbackForm = document.getElementById('feedbackForm');
@@ -388,3 +388,40 @@ if (feedbackForm) {
         }, 5000);
     });
 }
+
+
+
+
+
+
+/*
+document.getElementById("queryForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = {
+        name: document.getElementById("username").value,
+        phone: document.getElementById("userPhone").value,
+        destination: document.querySelector("select[name='destination']").value,
+        message: document.querySelector("textarea[name='message']").value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbzEvJCQRsCNmhmMDLzlNq4P2l9wGLRi6YJ8kTiyFWl0LMTMgPeoNtaH6kxycDMg7h0/exec", {
+        method: "POST",
+        body: JSON.stringify(formData)
+    })
+        .then(res => res.json())
+        .then(data => {
+            alert("Inquiry Sent Successfully ✅");
+            document.getElementById("queryForm").reset();
+        })
+        .catch(error => {
+            alert("Something went wrong ❌");
+            console.error(error);
+        });
+    if (!data.phone || data.phone.length !== 10) {
+        return ContentService
+            .createTextOutput(JSON.stringify({ result: "error" }))
+            .setMimeType(ContentService.MimeType.JSON);
+    }
+});
+
