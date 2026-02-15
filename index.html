@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
+
+<!--
+==================================================
+File: index.html
+Project: Yatra Vats Official Website
+Version: 2.0
+Author: Yatra Vats Team
+Created: 2026
+Description: Official travel website for Yatra Vats 
+             featuring group tours, vlogs, reviews,
+             inquiry forms, and booking details.
+==================================================
+
+Table of Contents:
+1. Head Section (SEO + Meta)
+2. Welcome Modal
+3. Header & Navigation
+4. Hero Slider
+5. Upcoming Tours
+6. Tour Packages
+7. Why Choose Us
+8. About Section
+9. Vlog Section
+10. Reviews
+11. FAQ
+12. Contact Section
+13. Inquiry & Feedback Forms
+14. Footer
+==================================================
+-->
+
+<!-- ================= HEAD SECTION (SEO + META TAGS) ================= -->
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description"
-        content="Join Yatra Vats for the best group tours in India. Led by Saurabh Patel, we offer family-friendly trips to Kedarnath, Kashmir, Goa, and more.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yatra Vats | Best Budget Group Tours in India | Saurabh Patel Vlogs</title>
     <meta name="title" content="Yatra Vats | Best Budget Group Tours in India | Saurabh Patel Vlogs">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#008b8b">
     <meta name="description"
         content="Book affordable group tours with Yatra Vats by Saurabh Patel. Specialized in Kedarnath, Kashmir, Sikkim, and Kerala family-friendly trips. Trusted by 700K+ subscribers.">
     <meta name="keywords"
@@ -28,20 +60,61 @@
         content="Plan your next adventure with Yatra Vats. Trusted by 5000+ Happy Yatris.">
     <meta property="twitter:image" content="logo.webp">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
     <link rel="canonical" href="https://www.yatravats.com/">
+    <link rel="icon" type="image/webp" href="logo.webp">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Yatra Vats",
+  "@id": "https://www.yatravats.com",
+  "url": "https://www.yatravats.com",
+  "logo": "https://www.yatravats.com/logo.webp",
+  "telephone": "+916263777672",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sector 4",
+    "addressLocality": "Bhilai",
+    "addressRegion": "Chhattisgarh",
+    "postalCode": "490001",
+    "addressCountry": "India"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday","Tuesday","Wednesday","Thursday",
+      "Friday","Saturday","Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://facebook.com/profile.php?id=100006895540130",
+    "https://instagram.com/yatravats",
+    "https://www.youtube.com/@yatravats9617"
+  ]
+}
+</script>
+
+
 </head>
 
 <body>
-
+    <!-- ================= WELCOME MODAL SECTION ================= -->
     <div id="welcomeModal" class="modal-overlay">
         <div class="pro-modal-container">
             <div class="close-icon-circle" id="closeBtnIcon">&times;</div>
 
             <div class="modal-image-wrapper">
-                <img src="kashmir poster.jpeg" alt="Special Offer" class="main-popup-img">
+                <img src="kashmir poster.jpeg" alt="Special Offer" class="main-popup-img" loading="eager">
 
             </div>
         </div>
@@ -50,6 +123,7 @@
         </div>
     </div>
 
+    <!-- ================= HEADER SECTION ================= -->
     <header>
         <div class="top-bar">
             <div class="contact-links">
@@ -57,15 +131,17 @@
                 <a href="mailto:yatravats@gmail.com"><i class="fas fa-envelope"></i> yatravats@gmail.com</a>
             </div>
             <div class="social-header">
-                <a href="https://instagram.com/yatravats" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://facebook.com/profile.php?id=100006895540130" target="_blank"><i
-                        class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/yatravats" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/profile.php?id=100006895540130" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
 
+        <!-- ================= NAVBAR SECTION ================= -->
         <nav class="navbar">
             <div class="logo">
-                <img src="logo.webp" alt="Yatra Vats Logo">
+                <img src="logo.webp" alt="Yatra Vats Logo" loading="eager">
                 <div class="logo-text">
                     <h1>Yatra <span>Vats</span></h1>
                 </div>
@@ -99,33 +175,37 @@
         </nav>
     </header>
 
+    <!-- ================= HERO SECTION ================= -->
     <section id="home_banner">
-        <div class="hero-slider">
+        <div class="hero-slider" role="region" aria-label="Featured Tour Slider">
             <div class="slider-wrapper">
                 <div class="hero-slide active">
-                    <img src="goa_pic.jpg" alt="Slide 1">
+                    <img src="goa_pic.jpg" alt="Goa Beach Tour Package by Yatra Vats" loading="eager">
                     <div class="hero-overlay"></div>
                 </div>
                 <div class="hero-slide">
-                    <img src="shimla_pic.jpg" alt="Slide 2">
+                    <img src="shimla_pic.jpg" alt="Shimla Manali Tour Package by Yatra Vats" loading="lazy">
                     <div class="hero-overlay"></div>
                 </div>
                 <div class="hero-slide">
-                    <img src="spiti_pic.jpg" alt="Slide 3">
+                    <img src="spiti_pic.jpg" alt="Spiti Tour Package by Yatra Vats" loading="lazy">
                     <div class="hero-overlay"></div>
                 </div>
             </div>
 
-            <div class="dots-wrapper">
+            <div class="dots-wrapper" role="tablist">
             </div>
 
             <div class="slider-controls">
-                <button class="nav-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
-                <button class="nav-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                <button class="nav-btn prev" onclick="changeSlide(-1)" aria-label="Previous Slide"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next" onclick="changeSlide(1)" aria-label="Next Slide"><i
+                        class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
 
+    <!-- ================= UPCOMING TOURS SECTION ================= -->
     <section id="upcoming_tour" class="section-padding">
         <div class="container">
             <div class="section-header">
@@ -136,7 +216,7 @@
             <div class="upcoming-tours-grid">
                 <div class="upcoming-tour-card">
                     <div class="tour-image">
-                        <img src="kashmir_pic.webp" alt="Kashmir">
+                        <img src="kashmir_pic.webp" alt="Kashmir" loading="lazy">
                         <span class="tour-badge">Best Seller</span>
                     </div>
                     <div class="tour-content">
@@ -155,7 +235,8 @@
                 </div>
 
                 <div class="upcoming-tour-card">
-                    <div class="tour-image"><img src="sikkim_pic.webp" alt="Sikkim"><span class="tour-badge">Best
+                    <div class="tour-image"><img src="sikkim_pic.webp" alt="Sikkim" loading="lazy"><span
+                            class="tour-badge">Best
                             Seller</span></div>
                     <div class="tour-content">
                         <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> 15 May - 20 May</span><span><i
@@ -173,7 +254,7 @@
                 </div>
 
                 <div class="upcoming-tour-card">
-                    <div class="tour-image"><img src="4 dham pic.webp" alt="CharDham"></div>
+                    <div class="tour-image"><img src="4 dham pic.webp" alt="CharDham" loading="lazy"></div>
                     <div class="tour-content">
                         <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> 05 June - 14
                                 June</span><span><i class="fas fa-clock"></i> 9N/10D</span></div>
@@ -199,6 +280,7 @@
         </div>
     </section>
 
+    <!-- ================= TOUR PACKAGES SECTION ================= -->
     <section id="tours" class="section-padding">
         <div class="container">
             <div class="section-header">
@@ -218,7 +300,7 @@
                 <div class="tours-grid" id="toursGrid">
                     <div class="tour-card" data-category="hill_stations">
                         <div class="tour-image">
-                            <img src="kashmir_pic.webp" alt="Kashmir">
+                            <img src="kashmir_pic.webp" alt="Kashmir" loading="lazy">
                             <span class="tour-badge">Top Choice</span>
                         </div>
                         <div class="tour-content">
@@ -237,7 +319,7 @@
                     </div>
 
                     <div class="tour-card" data-category="hill_stations">
-                        <div class="tour-image"><img src="shimla_pic.jpg" alt="Manali"><span
+                        <div class="tour-image"><img src="shimla_pic.jpg" alt="Manali" loading="lazy"><span
                                 class="tour-badge">Popular</span>
                         </div>
                         <div class="tour-content">
@@ -258,7 +340,7 @@
                     </div>
 
                     <div class="tour-card" data-category="south">
-                        <div class="tour-image"><img src="kerala_pic.webp" alt="Kerala"></div>
+                        <div class="tour-image"><img src="kerala_pic.webp" alt="Kerala" loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 5N/6D</span></div>
                             <h3>Kerala</h3>
@@ -276,7 +358,7 @@
                     </div>
 
                     <div class="tour-card" data-category="hill_stations">
-                        <div class="tour-image"><img src="sikkim_pic.webp" alt="Sikkim"></div>
+                        <div class="tour-image"><img src="sikkim_pic.webp" alt="Sikkim" loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 5N/6D</span></div>
                             <h3>Sikkim-Darjeeling</h3>
@@ -294,7 +376,7 @@
                     </div>
 
                     <div class="tour-card" data-category="pilgrimage">
-                        <div class="tour-image"><img src="4 dham pic.webp" alt="CharDham"></div>
+                        <div class="tour-image"><img src="4 dham pic.webp" alt="CharDham" loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 9N/10D</span></div>
                             <h3>Char Dham Yatra</h3>
@@ -312,7 +394,7 @@
                     </div>
 
                     <div class="tour-card" data-category="pilgrimage">
-                        <div class="tour-image"><img src="do-dham_pic.jpg" alt="DoDham"></div>
+                        <div class="tour-image"><img src="do-dham_pic.jpg" alt="DoDham" loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 4N/5D</span></div>
                             <h3>Do Dham Yatra</h3>
@@ -330,7 +412,7 @@
 
                     <div class="tour-card" data-category="pilgrimage">
                         <div class="tour-image">
-                            <img src="kedarnath_pic.jpg" alt="Kedarnath">
+                            <img src="kedarnath_pic.jpg" alt="Kedarnath" loading="lazy">
                         </div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 4N/5D</span></div>
@@ -346,7 +428,7 @@
                     </div>
 
                     <div class="tour-card" data-category="hill_stations">
-                        <div class="tour-image"><img src="spiti_pic.jpg" alt="Spiti"></div>
+                        <div class="tour-image"><img src="spiti_pic.jpg" alt="Spiti" loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 7N/8D</span></div>
                             <h3>Spiti Valley</h3>
@@ -361,7 +443,7 @@
                     </div>
 
                     <div class="tour-card" data-category="hill_stations">
-                        <div class="tour-image"><img src="nainital_pic.jpg" alt="Nainital"></div>
+                        <div class="tour-image"><img src="nainital_pic.jpg" alt="Nainital" loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 2N/3D</span></div>
                             <h3>Nainital</h3>
@@ -376,7 +458,8 @@
                     </div>
 
                     <div class="tour-card" data-category="beach_island">
-                        <div class="tour-image"><img src="goa_pic.jpg" alt="Goa"></div>
+                        <div class="tour-image"><img src="goa_pic.jpg" alt="Goa Beach Tour Package by Yatra Vats"
+                                loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 3N/4D</span></div>
                             <h3>Goa Beach Party</h3>
@@ -391,7 +474,7 @@
                     </div>
 
                     <div class="tour-card" data-category="hill_stations">
-                        <div class="tour-image"><img src="ooty_pic.webp" alt="Ooty"></div>
+                        <div class="tour-image"><img src="ooty_pic.webp" alt="Ooty" loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 3N/4D</span></div>
                             <h3>Ooty Hills</h3>
@@ -406,7 +489,7 @@
                     </div>
 
                     <div class="tour-card" data-category="pilgrimage">
-                        <div class="tour-image"><img src="haridwar pic.jpg" alt="Haridwar"></div>
+                        <div class="tour-image"><img src="haridwar pic.jpg" alt="Haridwar" loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 2N/3D</span></div>
                             <h3>Haridwar Rishikesh</h3>
@@ -421,7 +504,7 @@
                     </div>
 
                     <div class="tour-card" data-category="pilgrimage beach_island">
-                        <div class="tour-image"><img src="Rameswaram_pic.jpg" alt="Rameshwaram"></div>
+                        <div class="tour-image"><img src="Rameswaram_pic.jpg" alt="Rameshwaram" loading="lazy"></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 4N/5D</span></div>
                             <h3>Rameshwaram</h3>
@@ -443,14 +526,7 @@
             </div>
         </div>
     </section>
-
-    <div id="itineraryModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <div id="modalBody"></div>
-        </div>
-    </div>
-
+    <!-- ================= WHY CHOOSE US SECTION ================= -->
     <section class="why-choose-us">
         <div class="container">
             <div class="slim-header">
@@ -502,13 +578,14 @@
         </div>
     </section>
 
+    <!-- ================= ABOUT SECTION ================= -->
     <section id="about-us" class="about-section section-padding">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image-side">
                     <div class="image-stack">
-                        <img src="kashmir group.webp" alt="Saurabh Patel - Founder of Yatra Vats"
-                            class="main-about-img">
+                        <img src="kashmir group.webp" alt="Saurabh Patel - Founder of Yatra Vats" class="main-about-img"
+                            loading="lazy">
                         <div class="experience-badge">
                             <span class="number">5+</span>
                             <span class="text">Years of<br>Adventures</span>
@@ -566,8 +643,7 @@
                         </div>
                         <div class="mini-stat">
                             <h3>100%</h3>
-                            <p>Safe Stays
-                            <p>
+                            <p>Safe Stays</p>
                         </div>
                     </div>
                     <a href="javascript:void(0)" class="btn-about" onclick="focusQueryForm()">Let's Plan Your Trip</a>
@@ -576,14 +652,15 @@
         </div>
     </section>
 
+    <!-- ================= VLOG SECTION ================= -->
     <section class="vlog-section" id="vlogs">
         <div class="container">
             <div class="vlog-card">
                 <div class="vlog-grid">
                     <div class="vlog-video">
                         <div class="video-wrapper">
-                            <iframe id="mainVlogFrame" src="https://www.youtube.com/embed/8Tkgkm20Qa4" frameborder="0"
-                                allowfullscreen></iframe>
+                            <iframe id="mainVlogFrame" src="https://www.youtube.com/embed/8Tkgkm20Qa4"
+                                title="Yatra Vats Travel Vlog" loading="lazy" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="video-glow"></div>
                     </div>
@@ -597,21 +674,25 @@
                             <p class="carousel-label">Recent Uploads:</p>
                             <div class="vlog-thumbs">
                                 <div class="thumb-item active" onclick="changeVlog('8Tkgkm20Qa4')">
-                                    <img src="https://img.youtube.com/vi/8Tkgkm20Qa4/mqdefault.jpg" alt="Vlog 1">
+                                    <img src="https://img.youtube.com/vi/8Tkgkm20Qa4/mqdefault.jpg" alt="Vlog 1"
+                                        loading="lazy">
                                     <div class="play-overlay"><i class="fas fa-play"></i></div>
                                 </div>
                                 <div class="thumb-item" onclick="changeVlog('dqMRmVIfD_g')">
-                                    <img src="https://img.youtube.com/vi/dqMRmVIfD_g/mqdefault.jpg" alt="Vlog 2">
+                                    <img src="https://img.youtube.com/vi/dqMRmVIfD_g/mqdefault.jpg" alt="Vlog 2"
+                                        loading="lazy">
                                     <div class="play-overlay"><i class="fas fa-play"></i></div>
                                 </div>
                                 <div class="thumb-item" onclick="changeVlog('T31prWsYQ7Y')">
-                                    <img src="https://img.youtube.com/vi/T31prWsYQ7Y/mqdefault.jpg" alt="Vlog 3">
+                                    <img src="https://img.youtube.com/vi/T31prWsYQ7Y/mqdefault.jpg" alt="Vlog 3"
+                                        loading="lazy">
                                     <div class="play-overlay"><i class="fas fa-play"></i></div>
                                 </div>
                             </div>
                         </div>
 
-                        <a href="https://youtube.com/@yatravats9617" target="_blank" class="yt-button">
+                        <a href="https://youtube.com/@yatravats9617" target="_blank" rel="noopener noreferrer"
+                            class="yt-button">
                             <div class="btn-icon"><i class="fab fa-youtube"></i></div>
                             <span>Explore Full Channel</span>
                         </a>
@@ -621,6 +702,7 @@
         </div>
     </section>
 
+    <!-- ================= REVIEWS SECTION ================= -->
     <section id="reviews" class="review-section">
         <div class="container">
             <div class="section-header">
@@ -634,7 +716,7 @@
                     <div class="swiper-slide">
                         <div class="review-card">
                             <div class="user-info">
-                                <img src="m1.webp" alt="Sandeep Negi">
+                                <img src="m1.webp" alt="Sandeep Negi" loading="lazy">
                                 <div>
                                     <h4>Sandeep Negi</h4>
                                     <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -649,7 +731,7 @@
                     <div class="swiper-slide">
                         <div class="review-card">
                             <div class="user-info">
-                                <img src="w1.webp" alt="Anjali Singh">
+                                <img src="w1.webp" alt="Anjali Singh" loading="lazy">
                                 <div>
                                     <h4>Anjali Singh</h4>
                                     <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -664,7 +746,7 @@
                     <div class="swiper-slide">
                         <div class="review-card">
                             <div class="user-info">
-                                <img src="m2.webp" alt="Vikram Rathore">
+                                <img src="m2.webp" alt="Vikram Rathore" loading="lazy">
                                 <div>
                                     <h4>Vikram Rathore</h4>
                                     <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -679,7 +761,7 @@
                     <div class="swiper-slide">
                         <div class="review-card">
                             <div class="user-info">
-                                <img src="w2.webp" alt="Neha Kapoor">
+                                <img src="w2.webp" alt="Neha Kapoor" loading="lazy">
                                 <div>
                                     <h4>Neha Kapoor</h4>
                                     <div class="stars">⭐⭐⭐⭐</div>
@@ -694,7 +776,7 @@
                     <div class="swiper-slide">
                         <div class="review-card">
                             <div class="user-info">
-                                <img src="m3.webp" alt="Rahul Mehta">
+                                <img src="m3.webp" alt="Rahul Mehta" loading="lazy">
                                 <div>
                                     <h4>Rahul Mehta</h4>
                                     <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -709,7 +791,7 @@
                     <div class="swiper-slide">
                         <div class="review-card">
                             <div class="user-info">
-                                <img src="m4.webp" alt="Deepak Joshi">
+                                <img src="m4.webp" alt="Deepak Joshi" loading="lazy">
                                 <div>
                                     <h4>Deepak Joshi</h4>
                                     <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -724,7 +806,7 @@
                     <div class="swiper-slide">
                         <div class="review-card">
                             <div class="user-info">
-                                <img src="w3.webp" alt="Megha Jain">
+                                <img src="w3.webp" alt="Megha Jain" loading="lazy">
                                 <div>
                                     <h4>Megha Jain</h4>
                                     <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -739,7 +821,7 @@
                     <div class="swiper-slide">
                         <div class="review-card">
                             <div class="user-info">
-                                <img src="m5.webp" alt="Arun Sharma">
+                                <img src="m5.webp" alt="Arun Sharma" loading="lazy">
                                 <div>
                                     <h4>Arun Sharma</h4>
                                     <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -755,7 +837,7 @@
                         <div class="review-slide">
                             <div class="review-card">
                                 <div class="user-info">
-                                    <img src="w4.webp" alt="Pooja Hegde">
+                                    <img src="w4.webp" alt="Pooja Hegde" loading="lazy">
                                     <div>
                                         <h4>Pooja Hegde</h4>
                                         <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -771,7 +853,7 @@
                     <div class="swiper-slide">
                         <div class="review-card">
                             <div class="user-info">
-                                <img src="m6.webp" alt="Karan Malhotra">
+                                <img src="m6.webp" alt="Karan Malhotra" loading="lazy">
                                 <div>
                                     <h4>Karan Malhotra</h4>
                                     <div class="stars">⭐⭐⭐⭐</div>
@@ -788,6 +870,7 @@
         </div>
     </section>
 
+    <!-- ================= FAQ SECTION ================= -->
     <section id="faq" class="faq-section">
         <div class="container">
             <div class="section-header">
@@ -842,6 +925,7 @@
         </div>
     </section>
 
+    <!-- ================= CONTACT SECTION ================= -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-grid">
@@ -879,13 +963,13 @@
                     </div>
 
                     <div class="social-minimal">
-                        <a href="https://facebook.com/profile.php?id=100006895540130" target="_blank" class="fb"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/yatravats" target="_blank" class="ig"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@yatravats9617" target="_blank" class="yt"><i
-                                class="fab fa-youtube"></i></a>
-                        <a href="https://wa.me/916263777672" target="_blank" class="wa"><i
+                        <a href="https://facebook.com/profile.php?id=100006895540130" target="_blank"
+                            rel="noopener noreferrer" class="fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/yatravats" target="_blank" rel="noopener noreferrer"
+                            class="ig"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@yatravats9617" target="_blank" rel="noopener noreferrer"
+                            class="yt"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/916263777672" target="_blank" rel="noopener noreferrer" class="wa"><i
                                 class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
@@ -893,12 +977,14 @@
                 <div class="map-wrapper">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14878.472138986548!2d81.3340!3d21.1873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a293d0000000001%3A0x0!2zU2VjdG9yIDQsIEJoaWxhaSwgQ2hoYXR0aXNnYXJo!5e0!3m2!1sen!2sin!4v1700000000000"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        width="100%" height="100%" style="border:0;" referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ================= INQUIRY & FEEDBACK SECTION ================= -->
     <section id="inquiry_feedback" class="form-section">
         <div class="container">
             <div class="form-grid">
@@ -911,12 +997,12 @@
                     </div>
                     <form id="queryForm">
                         <div class="input-group">
-                            <input type="text" id="username" placeholder="Full Name" required>
+                            <input type="text" id="username" name="name" placeholder="Full Name" required>
 
                             <input type="tel" id="userPhone" name="phone" placeholder="WhatsApp Number (10-Digit)"
                                 pattern="[0-9]{10}" maxlength="10" required>
                         </div>
-                        <select required>
+                        <select name="destination" required>
                             <option value="" disabled selected>Choose Your Destination</option>
                             <option value="Kashmir">Kashmir</option>
                             <option value="Sikkim">Sikkim</option>
@@ -929,7 +1015,8 @@
                             <option value="Rameshwaram">Rameshwaram</option>
                             <option value="Other">Other Destinations</option>
                         </select>
-                        <textarea placeholder="Tell us about your requirements or questions..." rows="4"></textarea>
+                        <textarea name="message" placeholder="Tell us about your requirements or questions..."
+                            rows="4"></textarea>
                         <button type="submit" class="submit-btn query-btn">Get A Free Quote</button>
                     </form>
                 </div>
@@ -966,6 +1053,7 @@
         </div>
     </section>
 
+    <!-- ================= FOOTER SECTION ================= -->
     <footer class="main-footer">
         <div class="footer-top">
             <div class="container footer-grid">
@@ -982,16 +1070,17 @@
                         <h4 class="social-title">Connect With Us</h4>
                         <div class="social-icons-wrapper">
                             <a href="https://facebook.com/profile.php?id=100006895540130" target="_blank"
-                                class="s-icon fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://instagram.com/yatravats" target="_blank" class="s-icon ig"
-                                title="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@yatravats9617" target="_blank" class="s-icon yt"
-                                title="YouTube"><i class="fab fa-youtube"></i></a>
-                            <a href="https://wa.me/916263777672" target="_blank" class="s-icon wa" title="WhatsApp"><i
-                                    class="fab fa-whatsapp"></i></a>
-                            <a href="#" target="_blank" class="s-icon tg" title="Telegram"><i
+                                rel="noopener noreferrer" class="s-icon fb" title="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/yatravats" target="_blank" rel="noopener noreferrer"
+                                class="s-icon ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@yatravats9617" target="_blank" rel="noopener noreferrer"
+                                class="s-icon yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://wa.me/916263777672" target="_blank" rel="noopener noreferrer"
+                                class="s-icon wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="s-icon tg" title="Telegram"><i
                                     class="fab fa-telegram-plane"></i></a>
-                            <a href="#" target="_blank" class="s-icon in" title="LinkedIn"><i
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="s-icon in" title="LinkedIn"><i
                                     class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
@@ -1045,54 +1134,14 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/916263777672" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/916263777672" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
         <div class="whatsapp-tooltip">Chat with us</div>
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TravelAgency",
-  "name": "Yatra Vats",
-  "image": "logo.webp",
-  "@id": "",
-  "url": "https://www.yatravats.com",
-  "telephone": "+916263777672",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Sector 4",
-    "addressLocality": "Bhilai",
-    "addressRegion": "CG",
-    "postalCode": "490001",
-    "addressCountry": "IN"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://facebook.com/profile.php?id=100006895540130",
-    "https://instagram.com/yatravats",
-    "https://www.youtube.com/@yatravats9617"
-  ]
-}
-</script>
     <script async type='module'
         src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-
     <style>
         /* Isse chatbot ka button aur professional lagega agar interface allow kare */
         zapier-interfaces-chatbot-embed {
@@ -1104,7 +1153,9 @@
 
     <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmllsd7cg006oc4pcrojnrs9e'>
     </zapier-interfaces-chatbot-embed>
-    
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
