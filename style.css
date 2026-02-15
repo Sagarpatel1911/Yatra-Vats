@@ -1,3 +1,40 @@
+/* ======================================================
+   YATRA VATS - MAIN STYLESHEET
+   Author: Yatra Vats
+   Version: 2.0 (Professional Optimized)
+
+   FILE INDEX
+   1. Root Variables
+   2. Reset & Global Styles
+   3. Layout Utilities
+   4. Header & Navigation
+   5. Hero Section
+   6. Cards & Tours
+   7. Sections (About, Why Choose Us, Vlog, Reviews)
+   8. Forms
+   9. Footer
+   10. Floating Buttons
+   11. Responsive Media Queries
+====================================================== */
+
+/* ======================================================
+   1. ROOT VARIABLES
+====================================================== */
+:root {
+    --primary: #000000;
+    --cyan: #00ffff;
+    --red: #ff0000;
+    --yellow: #FFF141;
+    --text-dark: #222;
+    --text-light: #666;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+}
+
+/* ======================================================
+   2. RESET & GLOBAL STYLES
+====================================================== */
+
 html {
     scroll-behavior: smooth;
 }
@@ -9,25 +46,395 @@ html {
 }
 
 body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
     background-image: url('bg5.webp');
     background-size: cover;
     background-position: center;
-    font-family: 'Inter', sans-serif;
-    color: var(--text);
-    line-height: 1.6;
 }
 
 section {
-    /* Header ki height ke hisab se ise adjust karein (usually 70px to 100px) */
     scroll-margin-top: 119px;
 }
 
+/* ======================================================
+   3. LAYOUT UTILITIES
+====================================================== */
+
 .container {
-    max-width: 90%;
+    width: 90%;
+    max-width: 1400px;
     margin: auto;
     padding: 20px 0;
 }
 
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.section-title span {
+    color: var(--cyan);
+}
+
+/* ======================================================
+   4. HEADER & NAVIGATION
+====================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Top Bar */
+.top-bar {
+    background: var(--primary);
+    color: var(--white);
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    border-bottom: 2px solid var(--red);
+}
+
+.top-bar a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.top-bar a:hover {
+    color: var(--cyan);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo-text h1 {
+    font-size: 26px;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.logo-text h1 span {
+    color: rgb(0, 255, 255);
+}
+
+.logo-text small {
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+.nav-links li {
+    margin-left: 25px;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+}
+
+/* Dropdown */
+.submenu {
+    position: absolute;
+    display: none;
+    background: var(--white);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 220px;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+    width: 100%;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.submenu a:hover {
+    background: var(--bg-light);
+    color: var(--cyan);
+    padding-left: 25px;
+}
+
+/* Call Button */
+.nav-call-btn {
+    background: var(--cyan);
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    color: #000 !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-call-btn:hover {
+    background: var(--white);
+    border: 2px solid var(--cyan);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
+
+/* ======================================================
+   5. HERO SECTION
+====================================================== */
+
+#home_banner {
+    width: 100%;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    aspect-ratio: 2 / 1;
+}
+
+.hero-slider,
+.slider-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+/* Hero Navigation Buttons */
+.nav-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: rgba(255,255,255,0.3);
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: var(--cyan);
+    color: #000;
+}
+
+/* ======================================================
+   6. TOUR CARDS
+====================================================== */
+.upcoming-tours-grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+    align-items: center;
+}
+
+.upcoming-tour-card {
+    overflow: hidden;
+    min-width: 300px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.tour-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff4d4d;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tour-content {
+    padding: 20px;
+}
+
+.tour-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.tour-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.tour-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.tours-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+    align-items: center;
+}
+
+.tour-card {
+    overflow: hidden;
+    min-width: 300px;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+}
+
+.tour-image {
+    position: relative;
+    height: 220px;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tour-price {
+    margin: 15px 0;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 800;
+    color: #007bff;
+}
+
+.btn-book {
+    flex: 2;
+    background: #25d366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-details {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-details:hover {
+    color: #007bff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease-out;
+}
 
 
 
@@ -39,7 +446,6 @@ section {
     inset: 0;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(12px);
-    /* Deep blur for premium feel */
     z-index: 100000;
     align-items: center;
     justify-content: center;
@@ -52,7 +458,6 @@ section {
 .pro-modal-container {
     position: relative;
     max-width: 500px;
-    /* Standard professional width */
     width: 100%;
     animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -72,8 +477,7 @@ section {
 }
 
 .modal-image-wrapper:hover .main-popup-img {
-    transform: scale(1.03);
-    /* Subtle zoom effect */
+    transform: scale(1.03);                       /* Subtle zoom effect */
 }
 
 /* Close Button - Stylish Circle */
@@ -147,151 +551,6 @@ section {
 
 
 
-
-/* Header Base Styles */
-header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.top-bar {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 8px 5%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    border-bottom: 2px solid #ff0000;
-}
-
-.top-bar a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 15px;
-    transition: 0.3s;
-}
-
-.top-bar a:hover {
-    color: rgb(0, 255, 255);
-    /* Hover par Cyan color */
-}
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 60px;
-    margin-right: 10px;
-}
-
-.logo-text h1 {
-    font-size: 26px;
-    color: #000;
-    /* Black from logo */
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.logo-text h1 span {
-    color: rgb(0, 255, 255);
-}
-
-.logo-text small {
-    font-size: 12px;
-    color: #777;
-    letter-spacing: 1px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.nav-links li {
-    margin-left: 25px;
-    position: relative;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #222;
-    font-weight: 600;
-    transition: 0.3s;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.nav-links a:hover {
-    color: #ff0000;
-}
-
-/* Dropdown Menu Style */
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    width: 220px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-top: 3px solid rgb(0, 255, 255);
-    padding: 10px 0;
-}
-
-.dropdown:hover .submenu {
-    display: block;
-}
-
-.submenu li {
-    margin: 0;
-    width: 100%;
-}
-
-.submenu a {
-    padding: 10px 20px;
-    display: block;
-    font-size: 14px;
-    border-bottom: 1px solid #f4f4f4;
-}
-
-.submenu a:hover {
-    background-color: #f8f8f8;
-    color: rgb(0, 255, 255);
-    padding-left: 25px;
-    /* Smooth slide effect */
-}
-
-.nav-call-btn {
-    background: rgb(0, 255, 255);
-    color: #000 !important;
-    padding: 10px 20px;
-    border-radius: 4px;
-    border: 2px solid transparent;
-    transition: 0.4s;
-}
-
-.nav-call-btn:hover {
-    background: #fff !important;
-    border: 2px solid rgb(0, 255, 255);
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
-}
-
-
 /* Mobile Toggle */
 .menu-toggle {
     display: none;
@@ -335,48 +594,6 @@ header {
 
 
 
-#home_banner {
-    width: 100%;
-    background: #000;
-    position: relative;
-    overflow: hidden;
-    display: block;
-    aspect-ratio: 2 / 1;
-}
-
-.hero-slider,
-.slider-wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.hero-slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.hero-slide.active {
-    opacity: 1;
-}
-
-.hero-slide img {
-    width: 100%;
-    height: 100%;
-    /* 'contain' use karne se photo kabhi nahi kategi, 
-       par sides mein black space aa sakta hai agar photo choti hui.
-       'cover' with aspect-ratio cutting ko minimize karta hai. */
-    object-fit: cover;
-    object-position: center center;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-}
-
 /* Controls */
 .slider-controls {
     position: absolute;
@@ -390,23 +607,7 @@ header {
     pointer-events: none;
 }
 
-.nav-btn {
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    border-radius: 50%;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: 0.3s;
-}
 
-.nav-btn:hover {
-    background: rgb(0, 255, 255);
-    color: black;
-}
 
 /* Progress Bar */
 .hero-progress-container {
@@ -426,7 +627,6 @@ header {
 /* MOBILE ADJUSTMENT */
 @media (max-width: 768px) {
     #home_banner {
-        /* Mobile par ratio change kar denge taaki photo lambi dikhe */
         aspect-ratio: 2 / 1;
     }
 
@@ -459,10 +659,8 @@ header {
 
 .dot.active {
     background: rgb(0, 255, 255);
-    /* Cyan Color */
     transform: scale(1.3);
     width: 25px;
-    /* Modern Pill Shape */
     border-radius: 10px;
 }
 
@@ -496,161 +694,7 @@ header {
     color: rgb(0, 255, 255);
 }
 
-.upcoming-tours-grid {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-    transition: all 0.5s ease;
-    align-items: center;
-}
 
-.upcoming-tour-card {
-    overflow: hidden;
-    min-width: 300px;
-    /* Fixed width for horizontal scrolling */
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    border: 1px solid #eee;
-}
-
-.tours-grid {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-    transition: all 0.5s ease;
-    align-items: center;
-}
-
-.tour-card {
-    overflow: hidden;
-    min-width: 300px;
-    /* Fixed width for horizontal scrolling */
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    border: 1px solid #eee;
-}
-
-.tour-card:hover {
-    transform: translateY(-10px);
-}
-
-.tour-image {
-    position: relative;
-    height: 220px;
-}
-
-.tour-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.tour-badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #ff4d4d;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.tour-content {
-    padding: 20px;
-}
-
-.tour-meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.tour-content h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #222;
-}
-
-.tour-price {
-    margin: 15px 0;
-}
-
-.price {
-    font-size: 24px;
-    font-weight: 800;
-    color: #007bff;
-}
-
-.tour-actions {
-    display: flex;
-    gap: 10px;
-}
-
-.btn-book {
-    flex: 2;
-    background: #25d366;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-details {
-    text-decoration: none;
-    color: inherit;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    flex: 1;
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.btn-details:hover {
-    color: #007bff;
-    /* Hover par color change (optional) */
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 30px;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    max-height: 80vh;
-    overflow-y: auto;
-    animation: slideIn 0.3s ease-out;
-}
 
 @keyframes slideIn {
     from {
@@ -694,8 +738,6 @@ header {
 .tours-scroll-container::-webkit-scrollbar {
     display: none;
 }
-
-/* Chrome/Safari */
 
 
 /* Filter Tabs Styling */
@@ -771,15 +813,13 @@ header {
     color: #000;
 }
 
-/* Responsive Grid Restore (Desktop par grid wapas) */
+/* Responsive Grid Restore  */
 @media (min-width: 1024px) {
     .tours-grid {
         display: flex;
-        grid-template-columns: repeat(3, 1fr);
-        /* 3 cards per row */
+        grid-template-columns: repeat(3, 1fr);        /* 3 cards per row */
         gap: 25px;
     }
-
     .tour-card {
         min-width: 350px;
     }
@@ -792,7 +832,6 @@ header {
 /* --- WHY CHOOSE US STYLING --- */
 .why-choose-us {
     padding: 10px 0;
-    /* Boht kam padding vertical space bachane ke liye */
     background: #fff;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -809,7 +848,6 @@ header {
     width: 50px;
     height: 4px;
     background: #FF0000;
-    /* Bright Red */
 }
 
 .slim-header h2 {
@@ -819,14 +857,12 @@ header {
 
 .slim-header h2 span {
     color: #00FFFF;
-    /* Cyan */
 }
 
 /* Horizontal Grid Layout */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columns in one row */
+    grid-template-columns: repeat(4, 1fr);    /* 4 columns in one row */
     gap: 20px;
 }
 
@@ -890,15 +926,13 @@ header {
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 992px) {
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* Tablet par 2 columns */
+        grid-template-columns: repeat(2, 1fr);        
     }
 }
 
 @media (max-width: 576px) {
     .features-grid {
         grid-template-columns: 1fr;
-        /* Mobile par stack hoga par slim rahega */
     }
 
     .feature-item {
@@ -1105,10 +1139,9 @@ header {
 
 
 
-/* Vlog Section Professional Update */
+/* Vlog Section */
 .vlog-section {
-    background: #000000;
-    /* Pure Black for contrast */
+    background: #000000;    /* Pure Black for contrast */
     padding: 20px 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -1137,8 +1170,7 @@ header {
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%;
-    /* 16:9 Ratio */
+    padding-bottom: 56.25%;    /* 16:9 Ratio */
     height: 0;
     border-radius: 12px;
     overflow: hidden;
@@ -1167,7 +1199,6 @@ header {
 /* Content Styling */
 .vlog-tag {
     color: #FFF141;
-    /* Logo Yellow */
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1185,7 +1216,6 @@ header {
 
 .vlog-content h2 span {
     color: rgb(0, 255, 255);
-    /* Logo Cyan */
 }
 
 .vlog-content p {
@@ -1213,7 +1243,7 @@ header {
     color: #666;
 }
 
-/* YouTube Button Update */
+/* YouTube Button */
 .yt-button {
     display: inline-flex;
     align-items: center;
@@ -1359,21 +1389,18 @@ header {
     width: 100%;
     margin: 10px;
     background: #ffffff;
-    backdrop-filter: blur(10px);
-    /* Glass effect */
+    backdrop-filter: blur(10px);    /* Glass effect */
     padding: 30px;
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     position: relative;
-    overflow: hidden;
-    /* Glow effect ke liye */
+    overflow: hidden;    /* Glow effect */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .review-card::before {
-    content: "\f10d";
-    /* FontAwesome Quote icon */
+    content: "\f10d";    /* FontAwesome Quote icon */
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     position: absolute;
@@ -1390,12 +1417,9 @@ header {
 }
 
 .review-card:hover .tour-tag {
-    background-color: rgb(0, 255, 255);
-    /* Cyan background 💡 */
-    color: #000;
-    /* Black text for contrast 🖤 */
-    transition: 0.3s ease;
-    /* Smooth change ke liye ✨ */
+    background-color: rgb(0, 255, 255);    /* Cyan background 💡 */
+    color: #000;    /* Black text for contrast 🖤 */
+    transition: 0.3s ease;    /* Smooth change ✨ */
 }
 
 .user-info {
@@ -1420,7 +1444,6 @@ header {
 
 .stars {
     color: #f1c40f;
-    /* Gold color */
     font-size: 12px;
 }
 
@@ -1482,8 +1505,7 @@ header {
     overflow: hidden;
     border: 1px solid #edf2f7;
     transition: 0.3s;
-    border-bottom: 1px solid #eee;
-    /* Simple line separator instead of boxes */
+    border-bottom: 1px solid #eee;    /* Simple line separator instead of boxes */
     background: transparent;
 }
 
@@ -1565,7 +1587,6 @@ header {
 
 .section-header-compact h2 span {
     color: rgb(0, 255, 255);
-    /* Logo Cyan */
 }
 
 .section-header-compact p {
@@ -1596,8 +1617,7 @@ header {
     width: 45px;
     height: 45px;
     background: #f8f9fa;
-    color: #ff0000;
-    /* Logo Red Accent */
+    color: #ff0000;    /* Logo Red Accent */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1862,13 +1882,11 @@ form textarea:focus {
 
 /* Modern Footer Design */
 .main-footer {
-    background: #000000;
-    /* Dark Blueish-Black theme */
+    background: #000000;    /* Dark Blueish-Black theme */
     color: #e2e8f0;
     padding-top: 15px;
     font-family: 'Inter', sans-serif;
-    border-top: 4px solid rgb(0, 255, 255);
-    /* Cyan Top Border */
+    border-top: 4px solid rgb(0, 255, 255);    /* Cyan Top Border */
 }
 
 .footer-grid {
@@ -1910,8 +1928,7 @@ form textarea:focus {
 
 .s-icon:hover {
     transform: translateY(-5px);
-    border-color: #FFF141;
-    /* Yellow Border on hover */
+    border-color: #FFF141;    /* Yellow Border on hover */
     color: #FFF141;
 }
 
@@ -1972,13 +1989,11 @@ form textarea:focus {
 .footer-links a i {
     font-size: 10px;
     margin-right: 12px;
-    color: #ff0000;
-    /* Red from Logo as Bullet point */
+    color: #ff0000;    /* Red from Logo as Bullet point */
 }
 
 .footer-links a:hover {
-    color: rgb(0, 255, 255);
-    /* Cyan hover */
+    color: rgb(0, 255, 255);    /* Cyan hover */
     padding-left: 8px;
     transform: translateX(5px);
 }
@@ -2111,7 +2126,7 @@ form textarea:focus {
     color: #fff;
 }
 
-/* Tooltip (Jo "Chat with us" dikhayega) */
+/* Tooltip (show "Chat with us") */
 .whatsapp-tooltip {
     position: absolute;
     right: 80px;
@@ -2158,6 +2173,4 @@ form textarea:focus {
     .whatsapp-tooltip {
         display: none;
     }
-
-    /* Mobile par tooltip zaruri nahi */
 }
