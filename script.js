@@ -128,7 +128,7 @@ function changeSlide(n) {
 function startTimer() {
     timer = setInterval(() => {
         showSlide(currentIdx + 1);
-    }, 5000);
+    }, 22000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -136,6 +136,53 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(0);
     startTimer();
 });
+
+
+
+
+
+function handleSearch() {
+    const input = document.getElementById('tourSearchInput').value.toLowerCase();
+    const tourCards = document.querySelectorAll('.tour-card, .upcoming-card'); // Aapke package cards ki class
+    let found = false;
+
+    if (input === "") {
+        alert("Please enter a destination!");
+        return;
+    }
+
+    tourCards.forEach(card => {
+        const title = card.querySelector('h3').innerText.toLowerCase();
+        
+        if (title.includes(input)) {
+            // Smoothly scroll to the card
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Highlight effect (Thodi der ke liye border chamkega)
+            card.style.border = "2px solid #00ced1";
+            card.style.boxShadow = "0 0 20px rgba(0, 206, 209, 0.5)";
+            
+            setTimeout(() => {
+                card.style.border = "none";
+                card.style.boxShadow = "none";
+            }, 3000);
+
+            found = true;
+        }
+    });
+
+    if (!found) {
+        alert("Sorry, no tours found for '" + input + "'. Try Kashmir or Goa!");
+    }
+}
+
+// Enter key se bhi search chal jaye
+document.getElementById('tourSearchInput').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        handleSearch();
+    }
+});
+
 
 
 
