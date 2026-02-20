@@ -231,6 +231,7 @@ header {
     position: relative;
     overflow: hidden;
     display: block;
+    height: 50vh;
     aspect-ratio: 2 / 1;
 }
 
@@ -278,6 +279,72 @@ header {
 .nav-btn:hover {
     background: var(--cyan);
     color: #000;
+}
+
+.hero-content {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    color: #fff;
+}
+
+/* Video Styling */
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-container {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 40px;
+    padding: 5px 10px;
+}
+
+.search-box i {
+    color: #666;
+    margin-left: 15px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 40px;
+}
+
+.search-btn {
+    background: var(--cyan, #00ced1);
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 /* ======================================================
