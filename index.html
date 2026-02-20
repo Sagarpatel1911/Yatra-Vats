@@ -118,7 +118,8 @@ Table of Contents:
             </div>
         </div>
         <div class="image-overlay-btn">
-            <a href="https://wa.me/916263777672?text=Kashmir Inquiry" class="glass-cta">Enquire Now</a>
+            <a href="https://youtu.be/8Tkgkm20Qa4?si=Ti_U4bMX0w5WiSFd" target="_blank" class="glass-cta">Complete
+                Detail</a>
         </div>
     </div>
 
@@ -177,19 +178,38 @@ Table of Contents:
         <div class="hero-slider" role="region" aria-label="Featured Tour Slider">
             <div class="slider-wrapper">
                 <div class="hero-slide active">
-                    <img src="goa_pic.jpg" alt="Goa Beach Tour Package by Yatra Vats" loading="eager">
-                    <div class="hero-overlay"></div>
-                </div>
-                <div class="hero-slide">
-                    <img src="shimla_pic.jpg" alt="Shimla Manali Tour Package by Yatra Vats" loading="lazy">
-                    <div class="hero-overlay"></div>
-                </div>
-                <div class="hero-slide">
-                    <img src="spiti_pic.jpg" alt="Spiti Tour Package by Yatra Vats" loading="lazy">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="https://assets.mixkit.co/videos/41576/41576-720.mp4" type="video/mp4">
+                        <img src="goa_pic.jpg" alt="Travel India">
+                    </video>
                     <div class="hero-overlay"></div>
                 </div>
             </div>
-
+            <div class="hero-content">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="tourSearchInput" list="tourSuggestions"
+                            placeholder="Where do you want to go?">
+                        <datalist id="tourSuggestions">
+                            <option value="Char Dham">
+                            <option value="Do Dham">
+                            <option value="Goa">
+                            <option value="Haridwar Rishikesh">
+                            <option value="Kashmir">
+                            <option value="Kedarnath">
+                            <option value="Kerala">
+                            <option value="Nainital">
+                            <option value="Ooty">
+                            <option value="Rameshwaram">
+                            <option value="Shimla Manali">
+                            <option value="Sikkim Darjeeling">
+                            <option value="Spiti Valley">
+                        </datalist>
+                        <button class="search-btn" onclick="handleSearch()">Search Tours</button>
+                    </div>
+                </div>
+            </div>
             <div class="dots-wrapper" role="tablist">
             </div>
 
@@ -231,12 +251,49 @@ Table of Contents:
                     </div>
                 </div>
 
+
+                <div class="upcoming-tour-card">
+                    <div class="tour-image"><img src="do-dham_pic.jpg" alt="DoDham" loading="lazy"><span
+                            class="tour-badge">Best
+                            Seller</span></div>
+                    <div class="tour-content">
+                        <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> </span><span><i
+                                    class="fas fa-clock"></i>4N/5D</span></div>
+                        <h3>Do Dham Yatra</h3>
+                        <p>Kedarnath and Badrinath sacred yatra.</p>
+                        <div class="tour-price"><span class="price">₹18,150</span><small>&nbsp;per person</small></div>
+                        <div class="tour-actions">
+                            <a href="https://wa.me/917067414175?text=DoDham Inquiry" class="btn-book">Book</a>
+                            <a href="Do Dham Yatra 2026.pdf" download="Do_Dham_Itinerary_YatraVats" class="btn-details"
+                                onclick="openItinerary('dodham')" data-pdf="Do-Dham-itinerary.pdf"><i
+                                    class="fas fa-file-download"> </i> Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="upcoming-tour-card">
+                    <div class="tour-image"><img src="4 dham pic.webp" alt="CharDham" loading="lazy"><span
+                            class="tour-badge">Best
+                            Seller</span></div>
+                    <div class="tour-content">
+                        <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> </span><span><i
+                                    class="fas fa-clock"></i> 9N/10D</span></div>
+                        <h3>Char Dham Yatra</h3>
+                        <p>The ultimate spiritual salvation journey.</p>
+                        <div class="tour-price"><span class="price">₹32,650</span><small>&nbsp;per person</small></div>
+                        <div class="tour-actions">
+                            <a href="https://wa.me/917067414175?text=CharDham Inquiry" class="btn-book">Book</a>
+                            <a href="4 Dham Yatra 2026.pdf" download="Char_Dham_Itinerary_YatraVats" class="btn-details"
+                                onclick="openItinerary('chardham')" data-pdf="Chardham-itinerary.pdf">
+                                <i class="fas fa-file-download"></i>Itinerary</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="upcoming-tour-card">
                     <div class="tour-image"><img src="sikkim_pic.webp" alt="Sikkim" loading="lazy"><span
                             class="tour-badge">Best
                             Seller</span></div>
                     <div class="tour-content">
-                        <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> 15 May - 20 May</span><span><i
+                        <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> </span><span><i
                                     class="fas fa-clock"></i> 5N/6D</span></div>
                         <h3>Sikkim Darjeeling</h3>
                         <p>Explore the beauty of East Himalayas.</p>
@@ -245,23 +302,6 @@ Table of Contents:
                             <a href="https://wa.me/916263777672?text=Sikkim Inquiry" class="btn-book">Book</a>
                             <a href="SIKKIM GROUP TOUR.pdf" download="Sikkim_Itinerary_YatraVats" class="btn-details"
                                 onclick="openItinerary('sikkim')" data-pdf="Sikkim-itinerary.pdf">
-                                <i class="fas fa-file-download"></i>Itinerary</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="upcoming-tour-card">
-                    <div class="tour-image"><img src="4 dham pic.webp" alt="CharDham" loading="lazy"></div>
-                    <div class="tour-content">
-                        <div class="tour-meta"><span><i class="fas fa-calendar-alt"></i> 05 June - 14
-                                June</span><span><i class="fas fa-clock"></i> 9N/10D</span></div>
-                        <h3>Char Dham Yatra</h3>
-                        <p>The ultimate spiritual salvation journey.</p>
-                        <div class="tour-price"><span class="price">₹32,650</span><small>&nbsp;per person</small></div>
-                        <div class="tour-actions">
-                            <a href="https://wa.me/916263777672?text=CharDham Inquiry" class="btn-book">Book</a>
-                            <a href="4 Dham Yatra 2026.pdf" download="Char_Dham_Itinerary_YatraVats" class="btn-details"
-                                onclick="openItinerary('chardham')" data-pdf="Chardham-itinerary.pdf">
                                 <i class="fas fa-file-download"></i>Itinerary</a>
                         </div>
                     </div>
@@ -337,7 +377,8 @@ Table of Contents:
                     </div>
 
                     <div class="tour-card" data-category="south">
-                        <div class="tour-image"><img src="kerala_pic.webp" alt="Kerala" loading="lazy"></div>
+                        <div class="tour-image"><img src="kerala_pic.webp" alt="Kerala" loading="lazy"><span
+                                class="tour-badge">Popular</span></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 5N/6D</span></div>
                             <h3>Kerala</h3>
@@ -355,7 +396,8 @@ Table of Contents:
                     </div>
 
                     <div class="tour-card" data-category="hill_stations">
-                        <div class="tour-image"><img src="sikkim_pic.webp" alt="Sikkim" loading="lazy"></div>
+                        <div class="tour-image"><img src="sikkim_pic.webp" alt="Sikkim" loading="lazy"><span
+                                class="tour-badge">Popular</span></div>
                         <div class="tour-content">
                             <div class="tour-meta"><span><i class="fas fa-clock"></i> 5N/6D</span></div>
                             <h3>Sikkim-Darjeeling</h3>
@@ -656,7 +698,7 @@ Table of Contents:
                 <div class="vlog-grid">
                     <div class="vlog-video">
                         <div class="video-wrapper">
-                            <iframe id="mainVlogFrame" src="https://www.youtube.com/embed/8Tkgkm20Qa4"
+                            <iframe id="mainVlogFrame" src="https://www.youtube.com/embed/ZMr-Z0h4ot0"
                                 title="Yatra Vats Travel Vlog" loading="lazy" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="video-glow"></div>
@@ -670,18 +712,23 @@ Table of Contents:
                         <div class="mini-carousel">
                             <p class="carousel-label">Recent Uploads:</p>
                             <div class="vlog-thumbs">
-                                <div class="thumb-item active" onclick="changeVlog('8Tkgkm20Qa4')">
-                                    <img src="https://img.youtube.com/vi/8Tkgkm20Qa4/mqdefault.jpg" alt="Vlog 1"
-                                        loading="lazy">
-                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
-                                </div>
-                                <div class="thumb-item" onclick="changeVlog('dqMRmVIfD_g')">
-                                    <img src="https://img.youtube.com/vi/dqMRmVIfD_g/mqdefault.jpg" alt="Vlog 2"
+                                <div class="thumb-item active" onclick="changeVlog('ZMr-Z0h4ot0')">
+                                    <img src="https://img.youtube.com/vi/ZMr-Z0h4ot0/mqdefault.jpg" alt="Vlog 1"
                                         loading="lazy">
                                     <div class="play-overlay"><i class="fas fa-play"></i></div>
                                 </div>
                                 <div class="thumb-item" onclick="changeVlog('T31prWsYQ7Y')">
-                                    <img src="https://img.youtube.com/vi/T31prWsYQ7Y/mqdefault.jpg" alt="Vlog 3"
+                                    <img src="https://img.youtube.com/vi/T31prWsYQ7Y/mqdefault.jpg" alt="Vlog 2"
+                                        loading="lazy">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="thumb-item" onclick="changeVlog('dqMRmVIfD_g')">
+                                    <img src="https://img.youtube.com/vi/dqMRmVIfD_g/mqdefault.jpg" alt="Vlog 3"
+                                        loading="lazy">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="thumb-item" onclick="changeVlog('8Tkgkm20Qa4')">
+                                    <img src="https://img.youtube.com/vi/8Tkgkm20Qa4/mqdefault.jpg" alt="Vlog 4"
                                         loading="lazy">
                                     <div class="play-overlay"><i class="fas fa-play"></i></div>
                                 </div>
