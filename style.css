@@ -991,7 +991,7 @@ header {
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);        
     }
@@ -1177,7 +1177,7 @@ header {
 }
 
 /* --- MOBILE RESPONSIVE --- */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1342,7 +1342,7 @@ header {
 }
 
 /* Mobile Responsive */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .vlog-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1767,7 +1767,7 @@ header {
 }
 
 /* Responsive Fix */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1937,7 +1937,7 @@ form textarea:focus {
     color: #f1c40f;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .form-grid {
         grid-template-columns: 1fr;
     }
